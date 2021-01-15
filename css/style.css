@@ -1,0 +1,181 @@
+body {
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+}
+
+@font-face {
+  font-family: "Arista-Pro-Alternate-bold";
+  src: url(../Fonts/Arista-Pro-Alternate-Bold-trial.ttf);
+}
+@font-face {
+  font-family: "Arista-Pro-Alternate-light";
+  src: url(../Fonts/Arista-Pro-Alternate-Light-trial.ttf);
+}
+@font-face {
+  font-family: "gothic-regular";
+  src: url(../Fonts/GOTHIC.TTF);
+}
+@font-face {
+  font-family: "gothic-bold";
+  src: url(../Fonts/GOTHICB.TTF);
+}
+.fullPage #sideBar {
+  font-family: "Arista-Pro-Alternate-bold", sans-serif;
+}
+.fullPage #sideBar .logo {
+  width: 160px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+.fullPage #sideBar .logo img {
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  .fullPage #sideBar .logo {
+    width: 110px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+}
+.fullPage #sideBar .nav-link {
+  color: #495058bd;
+  font-size: 18px;
+}
+.fullPage #sideBar .nav-link.active {
+  background-color: #e9ecef;
+  color: #000000;
+  border-left: 5px solid #000000;
+  border-radius: 0;
+}
+.fullPage #sideBar .nested-projects .nav-link {
+  font-size: 16px;
+  background-color: transparent;
+}
+.fullPage #sideBar .nested-projects .nav-link.active {
+  background-color: #e9ecef;
+  border-left: 4px solid #000000;
+}
+.fullPage #sideBar .collapsing {
+  transition: none;
+}
+.fullPage #sideBar .projects span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 1.5rem;
+}
+@media (min-width: 1440px) {
+  .fullPage #sideBar .projects span {
+    margin-left: 3rem;
+  }
+}
+.fullPage #sideBar .projects span img {
+  max-width: 100%;
+}
+.fullPage .fullPageScroll {
+  font-family: "gothic-regular", sans-serif;
+  font-size: 18px;
+  position: relative;
+  height: 100vh;
+  overflow: auto;
+}
+.fullPage .fullPageScroll::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 50rem;
+  background: #e9ecef;
+}
+.fullPage .fullPageScroll::-webkit-scrollbar-thumb {
+  background: #ced4da;
+  border-radius: 50rem;
+}
+.fullPage .fullPageScroll:focus {
+  outline: none;
+}
+.fullPage .fullPageScroll > div {
+  height: 100vh;
+  padding-top: 10rem;
+}
+@media (max-width: 768px) {
+  .fullPage .fullPageScroll > div {
+    padding-top: 3rem;
+    height: auto;
+  }
+}
+.fullPage .fullPageScroll > div .contents {
+  padding: 0 3rem;
+  border-left: 6px solid #000000;
+}
+@media (max-width: 768px) {
+  .fullPage .fullPageScroll > div .contents {
+    padding: 0 1rem;
+  }
+}
+.fullPage .fullPageScroll > div .contents .contact-us-form input,
+.fullPage .fullPageScroll > div .contents .contact-us-form textarea {
+  border-color: #000000;
+  border-width: 2px;
+  border-radius: 0;
+}
+.fullPage .fullPageScroll > div .contents .contact-us-form button {
+  margin-left: auto;
+}
+@media (max-width: 768px) {
+  .fullPage .fullPageScroll > div .contents .contact-us-form button {
+    margin: 0 auto;
+  }
+}
+.fullPage .fullPageScroll #about-us .fw-bold {
+  font-family: "gothic-bold", sans-serif;
+}
+.fullPage .fullPageScroll #residential .contents {
+  cursor: pointer;
+}
+.fullPage .fullPageScroll #residential .contents .fw-bold {
+  font-family: "gothic-bold", sans-serif;
+}
+@media (max-width: 768px) {
+  .fullPage .fullPageScroll #residential .contents .text-muted {
+    font-size: 14px;
+  }
+}
+.fullPage .fullPageScroll #contact-us .contents .fw-bold,
+.fullPage .fullPageScroll #contact-us .contents label {
+  font-family: "gothic-bold", sans-serif;
+}
+.fullPage .fullPageScroll #contact-us .contents .social a {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 0.875rem;
+}
+.fullPage .fullPageScroll #contact-us .contents .social a img {
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  .fullPage .fullPageScroll #contact-us .contents {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .fullPage .fullPageScroll #contact-us {
+    margin-bottom: 5rem;
+  }
+}
+
+#projectCarousel .carousel-item {
+  position: relative;
+  padding-bottom: 50%;
+}
+#projectCarousel .carousel-item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=style.css.map */
