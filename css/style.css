@@ -83,6 +83,12 @@ body {
   position: relative;
   height: 100vh;
   overflow: auto;
+  scroll-behavior: smooth;
+}
+@media (max-width: 768px) {
+  .fullPage .fullPageScroll {
+    height: auto;
+  }
 }
 .fullPage .fullPageScroll::-webkit-scrollbar {
   width: 10px;
@@ -132,6 +138,18 @@ body {
 .fullPage .fullPageScroll #about-us .fw-bold {
   font-family: "gothic-bold", sans-serif;
 }
+.fullPage .fullPageScroll #about-us .archetype-effects {
+  cursor: pointer;
+  background: linear-gradient(to bottom, #e9ecef 0%, #e9ecef 100%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  text-decoration: none;
+  transition: background-size 0.2s;
+}
+.fullPage .fullPageScroll #about-us .archetype-effects:hover {
+  background-size: 4px 50px;
+}
 .fullPage .fullPageScroll #residential .contents {
   cursor: pointer;
 }
@@ -142,6 +160,38 @@ body {
   .fullPage .fullPageScroll #residential .contents .text-muted {
     font-size: 14px;
   }
+}
+.fullPage .fullPageScroll #residential .contents figure .project-img {
+  position: relative;
+  transition: transform 340ms cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  margin-bottom: 0.5rem;
+}
+.fullPage .fullPageScroll #residential .contents figure .project-img img {
+  margin: 0;
+}
+.fullPage .fullPageScroll #residential .contents figure .project-img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(65, 67, 69, 0.3);
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, rgba(65, 67, 69, 0), rgba(35, 37, 38, 0.55));
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, rgba(65, 67, 69, 0), rgba(35, 37, 38, 0.55));
+  transition: all 340ms cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  opacity: 0;
+}
+.fullPage .fullPageScroll #residential .contents figure .project-img:hover {
+  transform: scale(1.1);
+}
+.fullPage .fullPageScroll #residential .contents figure .project-img:hover::before {
+  opacity: 1;
+}
+.fullPage .fullPageScroll #residential .contents figure p {
+  font-size: 16px;
 }
 .fullPage .fullPageScroll #contact-us .contents .fw-bold,
 .fullPage .fullPageScroll #contact-us .contents label {
@@ -164,6 +214,12 @@ body {
 @media (max-width: 768px) {
   .fullPage .fullPageScroll #contact-us {
     margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #projectsModal .modal-body {
+    padding: 0;
   }
 }
 
