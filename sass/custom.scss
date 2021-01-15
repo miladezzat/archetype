@@ -1,0 +1,192 @@
+body {
+  overflow: hidden;
+  @media (max-width: 768px) {
+    overflow: auto;
+  }
+}
+
+@font-face {
+  font-family: "Arista-Pro-Alternate-bold";
+  src: url(../Fonts/Arista-Pro-Alternate-Bold-trial.ttf);
+}
+@font-face {
+  font-family: "Arista-Pro-Alternate-light";
+  src: url(../Fonts/Arista-Pro-Alternate-Light-trial.ttf);
+}
+
+@font-face {
+  font-family: "gothic-regular";
+  src: url(../Fonts/GOTHIC.TTF);
+}
+
+@font-face {
+  font-family: "gothic-bold";
+  src: url(../Fonts/GOTHICB.TTF);
+}
+
+$font-sidebar-bold: "Arista-Pro-Alternate-bold", sans-serif;
+$font-sidebar-light: "Arista-Pro-Alternate-light", sans-serif;
+$font-main-regular: "gothic-regular", sans-serif;
+$font-main-bold: "gothic-bold", sans-serif;
+
+.fullPage {
+  #sideBar {
+    font-family: $font-sidebar-bold;
+    .logo {
+      width: 160px;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      cursor: pointer;
+      img {
+        max-width: 100%;
+      }
+      @media (max-width: 768px) {
+        width: 110px;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+      }
+    }
+    .nav-link {
+      color: #495058bd;
+      font-size: 18px;
+      &.active {
+        background-color: #e9ecef;
+        color: #000000;
+        border-left: 5px solid #000000;
+        border-radius: 0;
+      }
+    }
+    .nested-projects {
+      .nav-link {
+        font-size: 16px;
+        background-color: transparent;
+        &.active {
+          background-color: #e9ecef;
+          border-left: 4px solid #000000;
+        }
+      }
+    }
+    .collapsing {
+      transition: none;
+    }
+    .projects {
+      span {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin-left: 1.5rem;
+        @media (min-width: 1440px) {
+          margin-left: 3rem;
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .fullPageScroll {
+    font-family: $font-main-regular;
+    font-size: 18px;
+    position: relative;
+    height: 100vh;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 10px;
+      border-radius: 50rem;
+      background: #e9ecef;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #ced4da;
+      border-radius: 50rem;
+    }
+    &:focus {
+      outline: none;
+    }
+    > div {
+      height: 100vh;
+      padding-top: 10rem;
+      @media (max-width: 768px) {
+        padding-top: 3rem;
+        height: auto;
+      }
+      .contents {
+        padding: 0 3rem;
+        border-left: 6px solid #000000;
+        @media (max-width: 768px) {
+          padding: 0 1rem;
+        }
+        .contact-us-form {
+          input,
+          textarea {
+            border-color: #000000;
+            border-width: 2px;
+            border-radius: 0;
+          }
+          button {
+            margin-left: auto;
+            @media (max-width: 768px) {
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+    #about-us {
+      .fw-bold {
+        font-family: $font-main-bold;
+      }
+    }
+    #residential {
+      .contents {
+        cursor: pointer;
+        .fw-bold {
+          font-family: $font-main-bold;
+        }
+        .text-muted {
+          @media (max-width: 768px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    #contact-us {
+      .contents {
+        .fw-bold,
+        label {
+          font-family: $font-main-bold;
+        }
+        .social {
+          a {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-right: 0.875rem;
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
+      }
+      @media (max-width: 768px) {
+        margin-bottom: 5rem;
+      }
+    }
+  }
+}
+
+// fix aspic ratio
+#projectCarousel {
+  .carousel-item {
+    position: relative;
+    padding-bottom: 50%;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
